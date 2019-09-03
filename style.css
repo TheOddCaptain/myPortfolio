@@ -1,0 +1,371 @@
+/* GLOBAL */
+
+*{
+    margin: 0;
+    paddin: 0;
+}
+
+/* Variables */
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 20px rgba(104, 104, 104, 0.8);
+}
+
+/* BODY */
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: black;
+    text-align: center;
+    line-height: 1.4;
+}
+
+h2 {
+    margin-bottom: .8em;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    min-height: 2em;
+}
+
+/* NAVIGATOR */
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    text-transform: uppercase;
+    padding-bottom: .2em;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.logo {
+    grid-column: 1;
+    background: url(images/beard-logo.png);
+    height: 150%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.tab-nav {
+    outline: none;
+    display: none;
+    grid-column: 3;
+}
+
+.nav-checkbox input:checked ~ .tab-content {
+    max-height: 25em;
+    padding-bottom: .3em;
+}
+
+.tab-nav-label {
+    cursor: pointer;
+    grid-column: 3;
+    display: block;
+    color: black;
+}
+
+.tab-content {
+    grid-column: 2;
+    display: block;
+    list-style: none;
+    text-align: center;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+}
+
+.tab-content li {
+    display: block;
+    padding-top: .625em;
+}
+
+.tab-content li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.tab-content li a::before {
+    content: '';
+    display: block;
+    height: .1875em;
+    background: black;
+    position: absolute;
+    bottom: -.3125em;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+}
+.tab-content li a:hover::before {
+    transform: scale(1,1);
+}
+.tab-content li a::after {
+    content: '';
+    display: block;
+    height: .1875em;
+    background: black;
+    position: absolute;
+    top: -.3125em;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+}
+.tab-content li a:hover::after {
+    transform: scale(1,1);
+}
+/* END NAVIGATOR */
+
+/* CONTAINER */
+
+.container {
+    display: grid;
+    background: #ccc;
+}
+img {
+    max-width: 100%;
+    object-position: center;
+}
+
+#welcome {
+ background: url(images/welcome-photo.jpg);
+ min-height: 65vh;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ text-align: center;
+ color: var(--light);
+
+}
+#portfolio {
+    padding-top: 1em;
+}
+.wrapper-welcome {
+    position: relative;
+    padding-top: 25vh;
+}
+.box {
+    background: var(--primary);
+    margin: 2em;
+    padding: 1em;
+    display: grid;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border-radius: 2em;
+    height: 85%;
+}
+.btn {
+    background: var(--dark);
+    margin: 1em;
+    color: var(--light);
+    padding: 0.6em 1.2em;
+    text-decoration: none;
+    border: 0;
+}
+.git-hub .box {
+    height: auto;
+}
+.toolbox .box {
+    height: auto;
+}
+.who-am-i .box {
+    height: auto;
+}
+
+#about .box {
+    margin-top: 0;
+}
+
+/* contact form */
+
+.form-container {
+    background-color: var(--primary);
+    height: 100vh;
+
+}
+.contact-form {
+    max-width: 100%;
+    background: var(--primary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    margin: 3em 0 4em 0;
+    border-radius: .5em;
+    text-align: center;
+    box-shadow: 0 0 1.7em #000000b3;
+    color: black;
+    text-transform: uppercase;
+
+}
+.contact-form h1 {
+    margin-top: 0;
+    font-weight: 800;
+}
+
+.text-box {
+    border: 1px solid gray;
+    margin: .5em 0 0 0;
+    padding: .5em 1em;
+    border-radius: .5em;
+
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.text-box input, .text-box textarea {
+    width: 15em;
+    margin-top: 0em;
+    border-style: hidden;
+
+}
+
+.text-box label{
+    display: block;
+    text-align: left;
+
+}
+
+.submit {
+    display: block;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: .6em 0;
+    text-transform: uppercase;
+}
+/* projects grid */
+.project-1 {
+    grid-area: pa;
+
+}
+.project-2 {
+    grid-area: pb;
+}
+.project-3 {
+    grid-area: pc;
+}
+.git-hub {
+    grid-area: gh;
+}
+.who-am-i {
+    grid-area: whi;
+}
+.toolbox {
+    grid-area: tb;
+}
+
+.wrapper-portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "pa"
+    "pb"
+    "pc"
+    "gh";
+}
+.wrapper-about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "whi"
+    "tb";
+;
+}
+@media (min-width: 600px) {
+    .wrapper-portfolio {
+        grid-template-columns: repeat(6 ,1fr);
+        grid-template-areas:
+        "pa pa pa pb pb pb"
+        "pc pc pc gh gh gh";
+    }
+    .wrapper-about {
+        grid-template-columns: repeat(2 ,1fr);
+        grid-template-areas:
+        "whi tb";
+    }
+
+}
+@media (min-width: 1200px) {
+    .wrapper-portfolio {
+        grid-template-columns: repeat(9 ,1fr);
+        grid-template-areas:
+        "pa pa pa pb pb pb pc pc pc"
+        "pa pa pa gh gh gh pc pc pc";
+    }
+    .wrapper-about {
+        grid-template-columns: repeat(2 ,1fr);
+        grid-template-areas:
+        "whi tb";
+    }
+    .index-body {
+    background: url(images/Home-page.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 0em;
+    margin-top: 60%;
+    }
+    .tab-content {
+    display: block;
+    overflow: visible;
+    grid-column: 2/4;
+    list-style: none;
+    text-align: left;
+    margin-bottom: 20px;
+    }
+    .tab-content li {
+    padding: 0;
+    margin: 0 20px 15px 20px;
+
+    }
+    .nav-checkbox input:checked ~ .tab-content {
+    max-height: 0;
+    }
+    .nav-container {
+        margin-top: 0em;
+        padding: 1em 0;
+    }
+    .tab-nav-label {
+    display: none;
+    }
+    .tab-content li {
+    display: inline-block;
+    }
+    .logo {
+        background-position: left;
+    }
+    .box {
+    margin: 3em;
+    padding: 1em;
+    }
+}
