@@ -18,8 +18,6 @@
   <meta name="msapplication-config" content="C:\Users\Erikh\OneDrive\Skrivebord\Odd-Erik-Portfolio\images\favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <link rel="stylesheet" href="style.css">
 </head>
  <!--  -->
@@ -31,14 +29,15 @@
         <input id="tab-nav" type="checkbox" class="tab-nav">
           <label for="tab-nav" class="tab-nav-label">Menu</label>
             <ul class="tab-content">
-              <li><a href="#welcome"> welcome </a></li>
-              <li><a href="#portfolio"> portfolio </a></li>
-              <li><a href="#about"> who am i </a></li>
+              <li><a href="#welcome" id="a"> welcome </a></li>
+              <li><a href="#portfolio" id="b"> portfolio </a></li>
+              <li><a href="#about" id="c"> who am i </a></li>
               <li><a href="contact-me.html"> contact me </a></li>
             </ul>
     </nav> <!-- End nav-checkbox -->
   </div> <!-- End nav-container -->
 </header>
+
 <div class="container">
   <section id="welcome">
     <div class="wrapper-welcome" alt="Photo by Fabian Grohs on Unsplash">
@@ -52,53 +51,71 @@
   <section id="portfolio">
     <div class="wrapper-portfolio">
       <div class="project-1">
-      <div class="box">
-      <h2>
-        Project #1
-      </h2>
-      <img src="images/projects/1.png">
-      <h3>Pig game</h3>
-      <p>
-        A game of luck with two players where the goal is to reach 100 points.
-        To get points each player has their turn to roll the dice and accumulates points, if the player rolls a one they loose all accumulated points and the turn goes over to the other player.
-      </p>
-      <p>Made with JavaScript, html and css.</p>
-      <a href="pig-game/index.html" target="_blank" class="btn">Try it out!</a>
-      </div>
-    </div> <!-- End project -->
+        <div class="box">
+        <h2>
+          Project #1
+        </h2>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="images/projects/pig-game-medium.jpg">
+          <source media="(min-width: 600px)" srcset="images/projects/pig-game-small.jpg">
+          <img src="images/projects/pig-game-large.jpg" alt="Project one photo, pig-game" >
+        </picture>
+        <h3>Pig game</h3>
+        <p>
+          A game of luck with two players where the goal is to reach 100 points.
+          To get points each player has their turn to roll the dice and accumulates points, if the player rolls a one they loose all accumulated points and the turn goes over to the other player.
+        </p>
+        <br>
+        <p>Made with JavaScript, html and css.</p>
+        <a href="pig-game/index.html" target="_blank" class="btn">Try it out!</a>
+        </div>
+      </div> <!-- End project-1 -->
+
     <div class="project-2">
-    <div class="box">
-      <h2>
-        Project #2
-      </h2>
-      <img src="images/projects/2.jpg">
-      <h3>project name</h3>
-      <p>
-        Description:
-
-      </p>
-      <a href="" target="_blank" class="btn">Try it out!</a>
-    </div>
+      <div class="box">
+        <h2>
+          Project #2
+        </h2>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="images/projects/budgety-medium.jpg">
+          <source media="(min-width: 600px)" srcset="images/projects/budgety-small.jpg">
+          <img src="images/projects/budgety-large.jpg" alt="Project two photo, budgety app" >
+        </picture>
+        <h3>Budgety</h3>
+        <p>
+          A budget app where you can add income and expenses to see how much you have left.
+          Also shows the percentages of how much each expense is of your total budget.
+        </p>
+        <br>
+        <p>Made with JavaScript, html and css.</p>
+        <a href="Budgety/index.html" target="_blank" class="btn">Try it out!</a>
+      </div>
     </div> <!-- End project-2 -->
-    <div class="project-3">
-    <div class="box">
-      <h2>
-        Project #3
-      </h2>
-      <img src="images/projects/1.jpg">
-      <h3>project name</h3>
-      <p>
-        Description:
 
-      </p>
-      <a href="" target="_blank" class="btn">Try it out!</a>
+    <div class="project-3">
+      <div class="box">
+        <h2>
+          Project #3
+        </h2>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="images/projects/beard-logo-small.jpg">
+          <source media="(min-width: 600px)" srcset="images/projects/beard-logo-small.jpg">
+          <img src="images/beard-logo.png" alt="Project three photo, placeholder logo" >
+        </picture>
+        <h3>project name</h3>
+        <p>
+          Description:
+
+        </p>
+        <br>
+        <a href="" target="_blank" class="btn">Try it out!</a>
       </div>
     </div> <!-- End project-3 -->
     <div class="git-hub">
     <div class="box" >
-      <h2>
+      <h3>
         See the code
-      </h2>
+      </h3>
       <p>
       </p>
       <a href="https://github.com/TheOddCaptain?tab=repositories" target="_blank" class="btn">To github</a>
@@ -108,48 +125,56 @@
   </section> <!-- End portfolio -->
 
   <section id="about">
-
     <div class="wrapper-about">
-        <div class="who-am-i">
-          <div class="box">
-      <h2>
-        Who am I
-      </h2>
-      <p>
-        Name: Odd Erik Haraldsen<br>
-        Location: Oslo, Norway<br><br>
-        I am a self thought web developer who gets truly excited about programming and all it's possibilities.
-      </p>
-      <br>
-      </div> <!-- End box-->
+      <div class="who-am-i">
+        <div class="box">
+          <h2>
+            Who am I
+          </h2>
+          <p>
+            Name: Odd Erik Haraldsen<br>
+            Location: Oslo, Norway<br><br>
+            I am a self thought web developer who gets truly excited about programming and all it's possibilities.
+            The reason I went into the field of web development is because I enjoy problem solving and logic.
+          </p>
+          <br>
+        </div> <!-- End box-->
       </div> <!-- End who-am-i -->
-    <div class="toolbox">
-      <div class="box">
-      <h2>
-        Toolbox
-      </h2>
-      <p>
-        HTML5<br>
-        CSS3 on grid<br>
-        JavaScript<br>
-        Python<br>
-        <b>Learning:</b> <br>
-        MySQL<br>
-        React<br>
-        Node.js<br>
 
-      </p>
+      <div class="toolbox">
+        <div class="box">
+         <h2>
+           Toolbox
+         </h2>
+         <p>
+           HTML5<br>
+           CSS3 on grid<br>
+           JavaScript<br>
+           Python<br>
+           <b>Learning:</b> <br>
+           MySQL<br>
+           React<br>
+         </p>
         </div> <!-- End box-->
       </div> <!-- End toolbox -->
     </div> <!-- End wrapper-about -->
 
     <footer class="box">
-      <p>OddErikBiz &copy 2019</p>
+      <p>OddBiz &copy 2019</p>
     </footer> <!-- End footer -->
 
   </section> <!-- End about -->
 </div> <!-- End container -->
-<!-- <script src="script.js"></script> -->
+  <script>
+  //close menu after click on list item
+  document.getElementById("a").addEventListener("click", uncheck);
+  document.getElementById("b").addEventListener("click", uncheck);
+  document.getElementById("c").addEventListener("click", uncheck);
+
+  function uncheck() {
+    document.getElementById("tab-nav").checked = false;
+  }
+  </script>
 </body>
 
 </html>
