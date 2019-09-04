@@ -1,21 +1,37 @@
+/* Index */
+/* ------------------*/
 /* GLOBAL */
+/* VARIABLES */
+/* BODY + h2, h3*/
+/* HEADER */
+/* NAVIGATOR */
+/* CONTAINER */
+/* CONTACT FORM */
+/* PROJECTS SECTION */
+/* @MEDIA */
+/* ------------------*/
+
+/* GLOBAL */
+/* ------------------------------------------------------------*/
 
 *{
     margin: 0;
     paddin: 0;
 }
+/* END GLOBAL */
 
-/* Variables */
-
+/* VARIABLES */
+/* ------------------------------------------------------------*/
 :root {
     --primary: #ddd;
     --dark: #333;
     --light: #fff;
     --shadow: 0 1px 20px rgba(104, 104, 104, 0.8);
 }
+/* END VARIABLES */
 
-/* BODY */
-
+/* BODY + h2, h3*/
+/* ------------------------------------------------------------*/
 body {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -29,9 +45,13 @@ body {
 h2 {
     margin-bottom: .8em;
 }
+h3 {
+    margin: .8em;
+}
+/* END BODY + h1, h2*/
 
 /* HEADER */
-
+/* ------------------------------------------------------------*/
 header {
     position: fixed;
     top: 0;
@@ -40,9 +60,10 @@ header {
     background: rgb(255, 255, 255);
     min-height: 2em;
 }
+/* END HEADER */
 
 /* NAVIGATOR */
-
+/* ------------------------------------------------------------*/
 .nav-container {
     width: 90%;
     margin: auto;
@@ -143,7 +164,7 @@ nav {
 /* END NAVIGATOR */
 
 /* CONTAINER */
-
+/* ------------------------------------------------------------*/
 .container {
     display: grid;
     background: #ccc;
@@ -154,7 +175,7 @@ img {
 }
 
 #welcome {
- background: url(images/welcome-photo.jpg);
+ background: url(images/welcome-photo-large.jpg);
  min-height: 65vh;
  background-size: cover;
  background-position: center;
@@ -201,9 +222,10 @@ img {
 #about .box {
     margin-top: 0;
 }
+/* END CONTAINER */
 
-/* contact form */
-
+/* CONTACT FORM */
+/* ------------------------------------------------------------*/
 .form-container {
     background-color: var(--primary);
     height: 100vh;
@@ -263,7 +285,10 @@ img {
     padding: .6em 0;
     text-transform: uppercase;
 }
-/* projects grid */
+/* END CONTACT FORM */
+
+/* PROJECTS SECTION */
+/* ------------------------------------------------------------*/
 .project-1 {
     grid-area: pa;
 
@@ -299,8 +324,11 @@ img {
     grid-template-areas:
     "whi"
     "tb";
-;
 }
+/* END PROJECTS SECTION */
+
+/* @MEDIA */
+/* ------------------------------------------------------------*/
 @media (min-width: 600px) {
     .wrapper-portfolio {
         grid-template-columns: repeat(6 ,1fr);
@@ -316,9 +344,14 @@ img {
 
 }
 @media (min-width: 1200px) {
+    .project-2 .box{
+    margin-bottom: 0;
+    }
     .wrapper-portfolio {
         grid-template-columns: repeat(9 ,1fr);
         grid-template-areas:
+        "pa pa pa pb pb pb pc pc pc"
+        "pa pa pa pb pb pb pc pc pc"
         "pa pa pa pb pb pb pc pc pc"
         "pa pa pa gh gh gh pc pc pc";
     }
@@ -369,3 +402,4 @@ img {
     padding: 1em;
     }
 }
+/* END @MEDIA */
